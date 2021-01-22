@@ -1,0 +1,16 @@
+// :img-src: https://tkiatd-blog-content.s3-ap-southeast-1.amazonaws.com
+// :img-category: Gratitude_and_Freedom
+// :img-subcategory: Zero_Waste
+// :img-title: List_of_Zero_Waste_Items
+// :img-url: {img-src}/article/{img-category}/{img-subcategory}/{img-title}
+//
+// [pass,subs="attributes"]
+// <img srcset="
+// {img-url}/test-150x100.png 150w,
+// {img-url}/test-300x200.png 300w,
+// {img-url}/test-450x300.png 450w,
+// {img-url}/test-600x400.png 600w"
+// sizes="(max-width: 700px) 70vw,
+// 600px"
+// src="{img-url}/test-600x400.png"
+// alt="&lt;img2&gt;">

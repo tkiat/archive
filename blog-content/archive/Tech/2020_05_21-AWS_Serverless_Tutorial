@@ -1,0 +1,68 @@
+= Introduction to AWS Lambda
+:author: Theerawat Kiatdarakun
+:docinfodir: ../_shared/asciidoctor/
+:docinfo: shared,shared-footer
+:nofooter:
+:revdate: Updated {docdate}
+:revremark: Published 2020-05-19
+:toc: left
+:toc-title: Table of Contents
+:url-serverless: https://www.serverless.com
+:sectnums:
+
+== What is AWS Serverless
+According to the https://www.youtube.com/watch?v=EBSdyoO3goc[AWS 2019 Talk] there are 4 guiding principles for a service to become serverless:
+
+1. No servers to manage
+2. Scales with usage
+3. Pay for value. Don't pay for idling time.
+4. Availability and fault tolerance built in. AWS Lambda exists in many regions.
+
+Benefits include better focus, grater agility, and more flexibility.
+
+Lambda, released in 2014, is Function-as-a-Service (FaaS) that handles a lot of things e.g. load balancing, auto scaling, and OS management. The user does't have to worry about these ✌️. It supports many programming languages such as Node.js, Python, and Go.
+
+The free tier is quite generous with 1M requests and 400,000 GBs of compute for each month.
+
+=== What can you do with Lambda?
+
+Web applications including complex web apps, backend services, real-time data processing, chatbots, etc.
+
+=== Lambda Execution Model
+There are many ways to invoke lambda function
+
+1. Synchronous or push-based model. Example: Amazon API Gateway talks to AWS Lambda upon API request.
+2. Asynchronous. Example: Amazon S3 or Amazon SNS will talks to Lambda upon receiving the data.
+3. Poll-based. Example: A poller that constantly looks for messages in Amazon Kinesis stream. It will pull those messages out and passes on Lambda.
+
+=== Lambda Permission Model
+
+Assign a role for who or what services can invoke the functions. Example: Lambda function can read from a particular DynamoDB table.
+
+== How to Use AWS Lambda
+=== What we need?
+We need AWS Lambda and serverless framework ({url-serverless}). Register for Amazon AWS (different account than Amazon online shopping!). Install serverless using "npm install -g serverless".
+
+=== Create a New Serverless User
+From AWS management console go to Identity and Access Management (IAM), set the access type to "Programmatic access" then click next. For permission you can choose "AdministratorAccess". You will get the key and the secret, we will use this for the next step.
+
+=== Connect that New User to the Terminal
+Connect to the exisiting user type "serverless config credentials --provider aws --key <key> --secret <secret> --profile <any profile name>".
+
+=== Using aws-nodejs Template
+Create a new project by entering "serverless create --template aws-nodejs --path <path>". Enter this new path. In serverless.yml (configuration file for serverless) add "profile: <your profile>" under "provider" to connect to your AWS user. Optionally you can overwrite existing settings e.g. server location. Finally, deploy the project using "sls deploy". Navigate to AWS Lambda console to check if the function is created, make sure that the server location is correct.
+
+=== Deploy an AWS S3 Bucket
+In serverless.yml add AWS S3 under "Resources" (from now on I am not going to tell explicitly, instead you can google it. In this case search how to add S3 on {url-serverless}). Deploy the code using "sls deploy". Now you should see a new bucket appears on the AWS S3 console.
+
+After this you need a way to sync data between this S3 bucket on the cloud with your local data. Add serverless-s3-sync plugin to serverless.yml, set the local directory, and install this plugin locally using npm. Try to add random file inside this local directory. Deploy the code. Now on your S3 account this file should appear.
+
+=== Create API with Serverless
+Create a new Node.js handler or overwrite the default one. Set some arbitrary data for this API and probably generate different feedbacks for each HTTP status code (a few would suffice). This will act as an API. Overwrite the default handler in serverless.yaml with this new handler, and add an event structure to it.
+
+=== Add serverless-webpack Plugin
+By default, the serverless framework deploys everything including something not really necessary. This deployment not only makes the upload size unnecessarily large but also disables inline editing on AWS Lambda console due to the large size of the package.
+So serverless-webpack plugin comes into play. It packages the code as needed and upload to AWS. Include this plugin and also "individually: true" under package in serverless.yml. Create webpack.config.js. In that file set target to node and the mode to production. Deploy it. Now on AWS lambda console you should see that the code is minified.
+
+=== Add DynamoDB
+Add DynamoDB under Resources in serverless.yml and set table name, attribute, key schema, billing mode. Deploy code.

@@ -1,0 +1,48 @@
+= Supercell - Scaling Mobile Games at AWS re:Invent 2018 Summary
+:author: Theerawat Kiatdarakun
+// :docinfo: shared-head
+// :docinfodir: ../../../../asciidoctor/
+:nofooter:
+:ref-youtube: https://www.youtube.com/watch?v=wqz7AunrzcU
+:revdate: Updated {docdate}
+:stylesheet: asciidoctor.css
+:toc: auto
+:toc-title: Outline
+
+== Foreword
+I like Clash Royale, it's a strategy game with only around 5 minutes per match, making it a perfect game to kill time during a commute or a toilet session. Meanwhile, they have to set up the server to accommodate users from all over the world. Being a real-time game, the responsiveness is very critical to the user experience. For this reason, I am interested in knowing how they set up the server. Note that the talk on {ref-youtube}[Youtube] was in 2018 so the information here might be a bit outdated. However, I just check that in May 2020 Supercell still uses Amazon Web Services.
+
+== Introducing Supercell
+.Challenges
+* Supercell has 4M peak concurrents users. It uses 6000 EC2 instances and 300 databases serving people from multiple regions.
+* There are 250 people in the company with 20 people per game team, out of which 3 people are server developers.
+* The small independent teams make it harder to incorporate common standards such as GDPR to the services.
+
+.Team Structure and Culture
+Supercell consists of small independent teams so the culture is bottom-up and focused on independence and responsibility. It adapts the agile methodology. Each team owns their AWS account(s) and uses AWS managed services to reduce operating cost, as a result, there is no separate ops-team. Teams can freely choose their own tech stack.
+
+[quote, Supercell culture deck]
+____
+Best teams make the best games
+____
+
+== Scaling Games
+
+* On scalability Supercell uses scale-out (multiple machines) instead of scale-up (more capable machines). To enable this, it does two things:
+	1. Use microservice-like architecture. It's not a true microservice because it's actually a single artifact using only Java, one repo, and one team. It uses Amazon EC2 Auto Scaling and Zookeeper. When the load increases, the EC2 Auto Scaling increases the number of EC2 instances which in turn compete for a limited number of roles from Zookeeper. The Zookeeper then increases the number of roles e.g. battle containers from 50 to 55 to accommodate the demand.
+	2. Database Sharding. A big database layer is split into smaller shards, with the same schema and different data. The load balancing happens by adding more shards as more accounts are created.
+* On database failures the game is broken and still handled manually thereafter. A new game, Brawl Stars, uses Amazon Aurora that has good failure recovery.
+
+== Scaling Analytics
+
+* Analytics can't make a hit game but can improve it.
+* Full transparency of data inside the company. Each team has a separate data scientist.
+
+.Data Pipeline
+* At first, upon interesting events happen on the client, the events are sent back and forth to the AWS S3. This event pipeline is simple but offers no realtime access and is still affected by a local disk failure.
+* They use Amazon Kinesis which supports real-time analytics, then compresses data with LZO and sends them to Amazon S3. This covers 80% of analytics needs. The real-time analytics enables them to use the data to do things such as update search indexes and create support use cases. This also overcomes local disk failure in the past. The main stream is quite large (~ 200 shards) so they split into applications specific streams.
+
+.Data Warehouse
+* At the beginning, in 2012, there is no data warehouse at all, just simple databases and QlikView.
+* Then they shifted to AWS. They used Vertica on AWS for data analytics and ETL where the data was queried by data scientists. This worked well at 2-10 billion rows of data but there were some challenges: spiky load, slow query during ETL, Vertica is not really cloud native so it's hard to scale.
+* So later they want to separate ETL from querying. They need to limit the amount of data in Vertica while maintaining a single source of truth. They decide to use AWS S3 as a single source of truth, forward it to Azkaban job scheduler, then to AWS EMR where ETL processing takes place, and finally store results to Vertica. That means they query from AWS S3 using Vertica. They have Amazon Athena as an alternative place to query from S3 bu since it has concurrency issues they use only for ad-hoc queries.

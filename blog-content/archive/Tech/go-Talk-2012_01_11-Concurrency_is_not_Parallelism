@@ -1,0 +1,13 @@
+Concurrency is not Parallelism
+By Rob Pike at GopherFest on 2012-01-11
+
+Concurrency
+- Dealing with many processes as once (not necessarily at the same time unlike Parallelism)
+- Example: many IO processes in a one-processor machine.
+- Offer deeper inside than Parallelism; the concurrent tasks can be used in many more designs. Paralellism can be easily built from concurrency.
+- Employ Goroutines as a tool to perform concurrency.
+- Goroutine is an independently run function. It's managed by Go runtime and it's cheaper than thread managed by the OS kernel. Goroutines are sybchornized by channel(s). It's cheap but not free.
+- A load balancer can be built using Goroutines.
+
+Parallelism
+- Example: vector dot product.

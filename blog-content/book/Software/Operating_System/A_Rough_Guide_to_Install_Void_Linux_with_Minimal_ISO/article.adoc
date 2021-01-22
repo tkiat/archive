@@ -1,0 +1,70 @@
+= A Rough Guide to Install Void Linux with Minimal ISO
+:author: Theerawat Kiatdarakun
+// :docinfo: shared-head
+// :docinfodir: ../../../../asciidoctor/
+:nofooter:
+:revdate: Updated {docdate}
+:stylesheet: asciidoctor.css
+:toc: auto
+:toc-title: Outline
+
+== Background
+
+I am using glibc x64 base ISO, installed on Btrfs format partition and MBR boot process in a BIOS system without disk encryption in this guide. The reason I do "high-level" overview is not that I am that minimalist, but because things will change and I am too lazy to maintain the content too much lol.
+
+
+=== Why Void Linux?
+Linux kernel has been under GPLv2 license since released. With such a permissive license many independent people and companies release it in many flavors. The popular distros include Ubuntu, Fedora, Manjaro, Arch Linux, etc. They focus on many different areas: convenience, privacy, security, free software, minimalism, etc. With the base ISO of more than 400MB, Void Linux is much less minimal than full-featured Fedora or Manjaro with software you probably don't need, while providing more functions than more minimal distros such as Alpine Linux (100+ MB) that probably more geared towards servers or embedded systems. That is to say, Void Linux is great for desktop user who want minimalistic experience.
+
+=== Why Minimal ISO?
+I tried LXDE flavor of Void before and wasn't quite impressed. Even the lightweight desktop environment has many programs/menus I don't actually need. The window management is awkward. Yes, very awkward. See, when you open a new application the newly opened window overlaps the previous one, and many times I need to manually move it around to fit the screen better. It turns out, desktop environments are not the only options available. Window managers like DWM or i3 that focus on windows and less bloat are better in my opinion. I am using DWM, a dynamic tiling window manager, and every time I open a new window it fits a new area without overlapping anything. It is simple, less bloat, and perfectly usable. What more do I need? Ha!
+
+Now you probably know that I use minimal ISO to avoid preinstalled desktop environments. In general, a minimal ISO gives you more freedom to choose anything that fits your need. Linux is freedom and we should it fully. It also gives me a learning experience on how to install Xorg, ALSA, and other related stuff. A laptop being started in a terminal window instead of GUI makes you feel like you are a cool hacker-like tech-savvy dude 😎.
+
+== High-Level Installation Overview
+
+=== 1. Pick and Flash OS Image
+Void Linux comes with two main types of image: base images and flavor images. We are gonna pick the base image here. The x86/64 ISOs come with two implements of C standard library: glibc and musl. glibc supports more programs while being not so slower (may even be faster) so I myself pick glibc. That being said, you might be able to run glibc programs on a musl system via chroot. I never try it myself though. You can use an excellent balenaEtcher program to flash to your USB stick and call it a day, no... not yet.
+
+=== 2. Just Follow the Installation Menu
+Unlike distros like Arch Linux that comes with CLI-based installation only. Void Linux offers a GUI installation menu (Yay!). It looks way more archaic than the Ubuntu installation but who really cares XD. Just follow along with the official guide and you are good to go.
+
+.Just want to list a few things you probably need to care about.
+* File format. Popular file systems like ext4 and btrfs are shown on the menu so you might want to pick it. Less popular file system ZFS is more tricky to install, just look at the Void docs.
+* MBR and GPT. Void installation menu recommends MBR for BIOS system since it is easier to install. However, it has only 4 primary partitions, which I don't care about lol. If you really need more than that you can create logical partitions down the road. If you are on UEFI system you might want to pick GPT partition.
+* If you are using an old laptop like me you certainly need some SWAP partitions.
+
+=== 3. Connect to the Internet and Install Xorg
+* One of the first things you want to do after installation finished is to connect to the internet. You don't need LAN cable here, just wireless is enough. Read the docs on how to do it. I connected using wpa_supplicant and used the following command to make it a service so that I don't have to manually connect to the internet every time I log in. Void Linux uses runit init system so this will be different from what systemd based OS does.
+----
+sudo ln -s /etc/sv/wpa_supplicant /var/service/wpa_supplicant
+----
+* Void Linux provides a convenient "xorg" package via a Void package manager: xbps, but to use it you need to install at least one terminal emulator like xterm.
+
+=== 4. Install Window Manager of Your Choice
+I am using ST terminal emulator because it also comes from suckless.org like DWM but the choice actually doesn't matter much. To use DWM and ST you need to install additional libraries via xbps: pkg-config, libX11-devel, libXft-devel, libXinerama-devel. These libraries contain header files necessary for DWM and ST to compile. Of course you can choose other window managers like i3 and xmonad but I have'nt tried those yet. Now git clone DWM and ST from their repo and type "sudo make clean install" in each directory. Don't forget to install make and gcc (via xbps) first otherwise you cannot compile it.
+
+=== 5. Create and Edit .xinitrc
+Xorg executes .xinitrc at first start so you need to tell it what to execute. Put the following into the file
+----
+exec dwm
+----
+You can also put any other code also to run e.g. dropbox or redshift. Here is my code.
+----
+[ -x "$(command -v xrandr)" ] && xrandr --output LVDS-1 --brightness 0.9
+[ -x "$(command -v redshift)" ] && redshift -O 3600
+[ -x "$(command -v dropbox)" ] && dropbox start &
+# change time on DWM status bar
+while true; do
+	xsetroot -name "$(date --rfc-2822)"
+	sleep 1
+done &
+
+exec dwm
+----
+
+=== 6. Configure sound
+Look at the ALSA section in Void Linux handbook online. You need alsa-utils library. Run "aplay -l" to list all your sound card and configure the soundcard of your choice in, for example, ~/.asoundrc. ALSA provides API to the system sound card driver and you can configure sound with it. Pulseaudio is optional higher-level sound configuration software I personally recommend it.
+
+=== 7. Enjoy Your New OS!
+Run "startx" to execute DWM and that's it. The rest is only the installation of GUI programs like Firefox and Chromium.

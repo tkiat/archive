@@ -1,0 +1,50 @@
+Error is a value. In other word, a value that implements error interface is an error. 
+
+3 core strategies for error handling.
+
+1. Sentinel: tell no further processing is possible. Ex. io.EOF. You use this in code like if err == EOF then ... . 
+
+Problems
+- This is the least flexible since the it returns only specific errors even if something more descriptive can be returned.
+- It creates dependency between packages.
+
+Never inspect output of error.Error() and compare it with another string since it is made for human not for code.
+
+2. Error Types: it's the type that you create which implement error interface so it is similar to sentinel error but with more context. But it, like an error value, must be made public to be useful and that create coupling.
+
+3. Opaque error handling: most flexible and least coupling as we don't explicitly import errors from packages. Example, if err != nil. However, sometimes this binary approach is not sufficient because of many behaviors but there is a way to deal to this
+
+Example,
+
+type temporary interface {
+    Temporary() bool
+}
+
+// ex. we implement network interface. if the error doesn't implement temporary method you can set its behavior like keep retrying 
+func IsTemporary(err error) bool {
+    te, ok := err.(temporary)
+    return ok && te.Temporary()
+}
+
+Convert errors to opague errors with errors.Wrap
+====================
+Don't only check code, handle them gracefully
+--------------------
+Try to be more descriptive like
+err := authenticate(xx)
+if err != nil {
+    return fmt.Errorf authenticate fail...
+}
+--------------------
+errors.New -> customize error message
+--------------------
+errors.Wrap -> return new error wrapping an error with something else like customized message
+why wrap? example,
+_, err := w.Write(xx)
+return errors.Wrap(err, "write failed")
+
+errors.Cause -> unwrap error
+--------------------
+handle error once not like log error then return err so that we don't get duplicate lines
+
+

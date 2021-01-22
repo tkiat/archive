@@ -1,0 +1,29 @@
+Go Proverbs
+By Rob Pike at GopherFest on 2015-11-18
+
+Don't communicate by sharing memory, share memory by communicating.
+- If you don't have pointer to the data, passing on a channel that address results in loss of access.
+
+1. Channels orchestrate; mutexes serialize.
+- Mutexes lock resources so a goroutine must wait for one another hence serialize process.
+2. The bigger the interface, the weaker the abstraction.
+- If a Java guy uses a big interface he can generate one or two implementations whereas Rob Pike wrote 20 implementations for io.Reader interface. The bigger the interface, the more strict "contract" becomes, so it is less common to make use of it.
+3. Make the zero value useful.
+	- The examples he gave are bytes.Buffer and sync mutex. The API is simpler when the user can use either of them without initialization.
+4. The empty interface says nothing.
+	- Rob says it might be needed but overused especially by beginners. Me> Java uses it but why?TODO
+5. Gofmt's style is no one's favourite, yet gofmt is everyone's favourite.
+6. A little copying is better than a little dependency.
+- He later found that Google's decision to prioritize dependencies was very costly. Actually, the code can be compiled faster and easier to maintain with smaller dependency tree. This is especially true if you need only a few lines of code from that library. Of course you should copy it only when it makes sense.
+7. Cgo/Syscall must always be guarded with build tags.
+- Syscall is system-specific and not portable so you should distribute multiple versions of your app. Under the hood Cgo is not portable so the same applies to it.
+8. Cgo is not Go
+- A lot of problems happens with Cgo
+9. With the unsafe package there are no guarantees.
+10. Clear is better than clever.
+- There are languages that cleverness like very short codes is a virtue but this doesn't apply to Go.
+11. Reflection is never clear.
+- He encourages beginners to step away from Reflection since they probably don't need it that much.
+12. Errors are values. Don't just check errors, handle them gracefully.
+- Errors are more than "not equal nil".
+13. Design the architecture, name the components, document the details.

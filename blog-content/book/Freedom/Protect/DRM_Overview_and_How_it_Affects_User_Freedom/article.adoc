@@ -1,0 +1,50 @@
+= DRM Overview and How it Affects User Freedom
+:author: Theerawat Kiatdarakun
+// :docinfo: shared-head
+// :docinfodir: ../../../../asciidoctor/
+:nofooter:
+:revdate: Updated {docdate}
+:stylesheet: asciidoctor.css
+:toc: auto
+:toc-title: Outline
+
+== What is DRM?
+DRM stands for Digital Rights Management. It is a technology that puts some restrictions on the usage of digital content. A DRMed book bought from Amazon prevents a user from reading a book without Amazon's client. A DRMed game bought from Ubisoft must be started using its client. These DRM adders intend to prevent illegal distributed copies. Many countries make it illegal to remove the DRM even if it's for personal use. By contrast, a DRM-free media looks the same as the ones you would pirate from shady sites. You can put it into any device you like, given the format is supported. Often the DRM-free media is offered in many formats so you don't usually need to worry about it.
+// == Brief History of DRM TODO
+
+== Arguments Against DRM
+The distributor/publishers all have the right to add DRM to their products, made with their blood, sweat, and tear! However, not every DRMed ridden media lives up their promise.
+
+=== It can usually be cracked.
+.All DRM protections on many media forms such as music, movies, and books can be circumvented. How?
+* Music: just play the music and use any recorder to record it.
+* Video: just play can use a camera to capture it.
+* Book: just use a text processor to extract all texts. Or if you are an oldie you can look at it and type on the fly!
+
+However, people cannot crack many online games. These games have the server that send other important information like levels and number of cards in addition to the base game so you cannot crack it and play with a legit player. However, some online games can still be cracked in offline-mode only.
+
+=== It ruins user experience.
+Having to download only the iTunes app to watch an iTunes movie is not as convenient as opening it using VLC or other free media players you like. The latter provides the user freedom to choose.
+
+=== It punishes paying customers.
+The pirater can play pirated iTunes movies freely as he wants but the paying customers have to play movies only on Apple's apps. Life sometimes suck for good guys, y'know.
+
+=== People know how to pirate anyway. So why add it?
+People know the treasure sites to pirate from. They know what VPN is and do at least simple research about the law to make a smarter decision. Ok, not every people do that but that's the worst case to consider. Besides, some media like porn is not legal in some countries so there is no punishment for downloading.
+
+== When does DRM Really Make Sense? (In My Opinion)
+=== When it lives up its promise.
+Even I dislike DRM so much but I still respect the rights of publishers to include DRM in their media. By saying "make sense" it doesn't mean I support DRM nor I think DRM is a good thing. I mean its makes sense to add DRM if no one can crack it, this way the DRM does live up its promise and doesn't punish paying customers as everybody have the same (low amount of) freedom.
+
+=== In a subscription-based model.
+What's gonna happen if Disney+ offers all of its movie DRM free? I can imagine most people will download everything during the first month and then unsubscribe thereafter. It's also likely that they share the movie with their family members or friends. Almost no one is going to buy blu-ray discs anymore since for roughly the same price they get a lot more from Disney+. As a result, Disney+ will probably end up not profitable. So yeah it's DRM that makes the subscription-based model viable.
+
+So why we care about the subscription-based model then? Short answer: it gives consumers more options, and more options benefit them more. Traditionally people had to buy VHS and cassettes and that cost a lot of money, so many of them illegally pirated the media. On the other hand, Netflix, Xbox Game Pass, Kindle Unlimited, and the like allow those poor souls to consume a lot within a month. The ability to access the media at all is more important than privacy and freedom since less is more than zero.
+
+== Viability of DRM-Free Media
+I have come across articles that claim the witcher 3 copies are more sold as DRM free on GOG than Steam. I will research more in this area when I have more time.
+
+== DRM Free Resources
+* You can find them on Defective by Design website.
+* Since there is no video game recommendation on the above website I want to recommend you itch.io and GOG. GOG takes a 30% cut from developers while itch.io takes any percent up to the developers. The quality control of GOG is much better by the way. Don't ignore other platforms like Epic Games Store and Steam as many of the games are also DRM-free; however, you must copy and paste a game manually and there are no proper installation files. The system doesn't really support DRM free backup (you don't get update notifications if you don't currently install it on Steam for example).
+* Another popular choice is Humble Bundle. They offer incredibly cheap and often high-quality bundles, usually in a DRM free format.

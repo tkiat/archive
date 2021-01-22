@@ -1,0 +1,30 @@
+= Revive My 11 Year-Old Sony Laptop with Void Linux
+:author: Theerawat Kiatdarakun
+// :docinfo: shared-head
+// :docinfodir: /home/tkiatd/Git/blog-content/asciidoctor/
+:nofooter:
+:revdate: Updated {docdate}
+:stylesheet: asciidoctor.css
+:toc: auto
+:toc-title: Outline
+
+== When I was Unaware of Freedom
+I got Vaio VGN-CS16S when I was a university student (in 2009 if I recall correctly). I bought it because it is one of the most beautiful laptops! It came with Windows Vista at that time yes it was horrendously slow but I didn't remove it because I wanted to use Windows and was not very interested in Linux at the time. The boot time was more than one minute but I thought it was probably a "feature". The genuine Windows Vista logo was so beautiful and I wanted it! It was relatively inexpensive model (around 800$).
+
+I bought another laptop to play games, still a cheap one but I lost it in Berlin at the train station along with all the money, laptop, Samsung tablet, HDD, everything. That was a perfect opportunity to build my first custom desktop pc! I use it until I came back to Thailand only to find it that consumes energy more than what I expected.
+
+This old Vaio is the only laptop I had, and I sometimes needed a portable advanced computing device, not just an iPad. I immediately remove Windows and replace it with Ubuntu18.04 with disappointment in performance. So I replaced it with Ubuntu14.04 but still experienced some problems up until a point where nothing works after boot! I reverted to the desktop pc again.
+
+== The First Installation Attempt
+One day I didn't know what happen I decided to try this laptop again, this time with something more minimal. After researching for a while I came across Void Linux which is said to be a good independent distro. It doesn't use Systemd and is not a fork of any other OS. It's built with UNIX philosophy in mind: do one thing and do it well. I heard some noise that day supposedly from soon-to-be archaic core 2 Duo inside my laptop "do it, do it please" so I installed it on that day. I though minimal install was too much of the hassle so I chose LXDE flavor.
+
+I was surprised by the fast boot time. But at the same time disappointed by the lackluster of the desktop environment itself. The desktop UI had some bugs (no WiFi icon) and a half-visible taskbar. I was quite sure that should be because of my laptop model. My laptop keyboard doesn't work after waking up also. The OS forced me to use CLI commands (like for WiFi), and after some time I got hooked by this minimal OS. I was shocked at first when I saw no Python and GCC installed! No big deal for me I just use the excellent XBPS package manager to install them. Void Linux has its own non-free repository so you have more program choices over a purely free distro.
+
+Without intensive applications, the performance was OK. I changed the desktop environment to LXDE that is a little more CPU-intensive but offered a lot more utilities. I began using many browser tabs and terminals. However, the computer hanged many times I thought it was because of RAM (no swap partition at the time). I installed psensor to measure performance and it convinced me so. Mind you my HDD was 11-year-old!
+
+== The Second Installation Attempt
+I came across Luke Smith's youtube video about DWM and I got the first impression about window managers, a very good impression indeed since I wanted to speed up my laptop. A desktop environment includes many programs I don't need and I want to eliminate them! I wanted a new clean start so I decided, this time, to use minimal ISO (around 400mb+). I also removed Intenso SSD from my desktop to use it on this laptop. The unexpected problem was that the new SSD was around 2.5mm less thick than the old HDD. It didn't trouble me much since the HDD mount point was at the bottom (with the normal laptop orientation) but anyway I had unused Roccat mousepad so I cut some part and pad it at the top of the HDD slot.
+
+The minimal distro forced me to learn about the concept of display server and stuff. The installation tooked some hours because I wrote some ansible on the fly to install every package there. Ansible is the automation program that makes the installation script reusable which is great. Now the laptop doesn't freeze anymore thanks to the SSD. Now I feel much more freedom and become more peaceful. It makes me appreciate the once seemingly slow, chunky, and useless device. Thank you, Void Linux.
+
+PS: I removed the Windows Vista logo off my laptop and noticed much color difference on the laptop surface! FYI, my laptop is white so it turns yellow over time. I guess this is the only benefit of the logo lol.

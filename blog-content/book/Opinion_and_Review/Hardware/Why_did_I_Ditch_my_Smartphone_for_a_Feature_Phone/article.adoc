@@ -1,0 +1,33 @@
+= Why did I Ditch my Smartphone for a Feature Phone?
+:author: Theerawat Kiatdarakun
+// :docinfo: shared-head
+// :docinfodir: ../../../../asciidoctor/
+:nofooter:
+:revdate: Updated {docdate}
+:stylesheet: asciidoctor.css
+:!toc:
+
+== Why did I Ditch My Smartphone?
+
+I notice many people always staring on his/her smartphones on BTS Skytrain. Of course, we are not lifeless stones, and sitting on the train every day can be boring. However, this causes a shorter attention span among young generations. Also, I don't quite get why someone would shell out 1000$ or more for an easy-to-get-stolen smartphone, it's just too risky and usually less repairable. My HTC One m7 is almost unusable because of the swollen battery. I don't disappoint in the battery since it has been already 7 years but what I really dislike is the fact that it's hard to disassemble to replace the battery. This model only scores 1 out of 10 from IFIXIT, a website that determines the repairability of devices. On the other hand, a legacy phone like NOKIA 3310 can be easily torn down.
+
+Smartphone alternatives include feature phones. It's so simple but it usually doesn't have popular apps to connect with friends or even very useful apps like Google Maps. Of course, someone probably needs those apps. I recalled when I was in Germany and I wanted to cycle to another nearby city, I didn't know the route and traditional map will become a waste after using it. I found Google Map indeed useful since I couldn' take a laptop or even an iPad with me when cycling, it's just not very convenient. But now I am in Bangkok and find no reason to use Google Maps anymore. It still has merit but I rarely go out anywhere since I become a computer junkie. On the seldom occasion I plan to carry my WiFi iPad instead with the help of a hotspot from my feature phone.
+
+That being said, I really miss the smartphone camera. A compact camera can capture moving or low-light objects much better than a modern phone but lacks versatility. I probably buy a cheap phone if I have a chance to travel somewhere beautiful. But for now, I am using only feature phones.
+
+== What Feature Phone am I Using and why it works for me?
+My feature phone of choice is True Super Hero 4G Entertainment (black) and True Super Hero 4G Entertainment Plus (red). The latter is a newer version but almost identical in functionalities. Owning these is an eye-opening experience for me for many reasons.
+
+* Both cost only 10 dollars each. Each even comes with an adapter, a USB cable, and an earphone! The quality of an earphone is abysmal but it works!
+
+* They are very repairable, a 5-year-old can easily remove the battery away and replace it.
+
+* They have back cameras, the plus model also has a front camera as well. The quality is horrendous, but nevertheless it just works.
+
+* Both are capable of a 4G hotspot. I am using 80GB/month prepaid sim card that costs 1400 baht per year (around 45 USD) on a phone as a hotspot for my iPad and laptop. The quality is good enough that I can play mobile games absolutely without lagging (most of the time). I connect this phone to a charger all the time.
+
+* I am using another phone for a cheap prepaid SIM card to go outside.
+
+* The sim card is tied to a Simcard from True corporation only but they are one of the largest service providers in Thailand (top 3) so I am not worried much about signal issues.
+
+* There will be less distraction at work since I cannot use social media. Their absence at work also makes me look even more professional! When I come back home I can use social media on my iPad or laptop instead. So I don't miss out on anything while becoming a much more organized person. It also reduces unnecessary spendings for another expensive phone which will have the same apps as installed on my iPad.

@@ -1,0 +1,58 @@
+= Introduction to Personal Branding
+:author: Theerawat Kiatdarakun
+// :docinfo: shared-head
+// :docinfodir: ../../../../asciidoctor/
+:nofooter:
+:revdate: Updated {docdate}
+:stylesheet: asciidoctor.css
+:toc: auto
+:toc-title: Outline
+
+== Review
+====
+* Platform: Coursera
+* Instructor: Kimberley Barker
+* Institution: University of Virginia
+* Approximate Duration: 5 Weeks, 3-5 Hours/Week
+====
+
+I got this Coursera course for free during a coronavirus outbreak in 2020. At that time, I was going to build my portfolio site so I wanted to gain more perspective about how to put myself out there. The course has no practical assignments, just some talks. The instructor talks very casually and relaxing. So, I would say this is more like a fun short course which is not that in-depth.
+
+== Summary
+=== 00: Why Branding?
+* Branding serves both internal and external purposes. The internal purpose is to find what your values are and what you want to do. The external purpose is to make it easy for the right kinds of people to find you for the right kinds of work since you will become associated with certain qualities.
+* Personal branding is leadership, not self-promotion campaign
+* Don't make it too personal e.g. your political opinions
+
+=== 01: The First Step in Building Your Brand - Know Thyself
+* Myers-Briggs is recommended. It's not scientific but according to the instructor she thinks it's pretty accurate
+* Be honest with assessment
+
+=== 02: Your Brand and Authenticity
+* Choose three cornerstone words that cover both professional and personal you to form a mission statement: what you have to offer the world.
+* You should revisit those three words at least annually. You don't have to share those words
+* Be authentic. Your brand should be a truthful reflection of your values
+* Have good photo quality. She mentioned queen Elizabeth I as a great example. Lighting, posture, how you dress are important. You want your photo to match your appearance.
+
+=== 03: Establishing Your Brand's Board of Directors
+* They are people you reach out when making major decisions.
+* They may not be public. Choose at least four people. They should have 3 qualities: 1. you admire and respect 2. they care about you 3. be honest with you.
+
+=== 04: Social Media & You
+* Choose the best social media platform. They are different for a different targeted group.
+* She recommends at most two platforms. You don't want your content to go stale.
+* Everybody can opt for free platforms. A self-employed person needs his/her own website.
+
+=== 05: Creating Your Brand's Maintenance Plan
+* Update regularly to convince others that you care about your brand.
+* No less than twice a week. No more than 5 times per week. Use the 80/20 rule: 80 for content for followers 20 for self-promotion.
+* Automate social media update on other platforms is great but it can destroy a sense of personal connection. Anyway, you might be able to set posting time suitable for your target group.
+
+=== 06: An Introduction to Reputation Management
+* You should care about reputation management because people can use Google to find out about you, and reviews about your business. Yelp can affect restaurants' revenue.
+* Check your privacy settings. Create alerts in search engines.
+
+=== 07: An Overview of Digital Privacy Issues
+* Rule: assume everything you put out there is seen by enemies or anybody else.
+* There is no such thing as free Wi-Fi. They track you.
+* Create strong passwords

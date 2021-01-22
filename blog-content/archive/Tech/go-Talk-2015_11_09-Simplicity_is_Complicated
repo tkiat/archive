@@ -1,0 +1,8 @@
+Simplicity is Complicated
+By Rob Pike at dotGo on 2015-11-09
+
+Go doesn't try to compete on features, rather it only focuses on right features. You waste time to choose the one to use if Go has too many features. Besides, you waste time thinking why the code is written in this way from a feature set available. More features mean more fun things to play with but more work to maintains. Readability is one of the most important thing.
+
+Go focuses on being simple. It doesn't have map, reduce, and filter as they are more expensive than a simple for loop. It might help programmer but it hurts computer. Go is actually complex but it feels simple since each piece works together orthogonally and the interface is simple.
+
+Examples are garbage collector (no interface exposed to programmers) and concurrency (require typing only "go " in front of function but there's a lot behind the scene). There is also a lot of design decisions behind arithmetic operation e.g. 2.0 is float64 but they make 2.0<<0 to int. The function likes the one handling server handles unicode and UTF-8 seamlessly behind the scene.

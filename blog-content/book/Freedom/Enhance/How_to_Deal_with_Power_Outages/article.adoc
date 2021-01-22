@@ -1,0 +1,27 @@
+= How to Deal With Power Outages
+:author: Theerawat Kiatdarakun
+// :docinfo: shared-head
+// :docinfodir: ../../../../asciidoctor/
+:nofooter:
+:revdate: Updated {docdate}
+:stylesheet: asciidoctor.css
+// :stylesheet: dark-complete.css
+// :stylesheet: notebook-complete.css
+:toc: auto
+:toc-title: Outline
+
+== Background
+I didn't experience a power shortage when I was in Germany but it is a common problem in Thailand. When the lightning strikes hard, often the power is gone for a few seconds or even longer. This article aims to cover how to choose your stuff to cope with the occasional shortage.
+
+== Recommended Items
+=== Internet
+The disadvantage of broadband internet is that the router usually has no battery, making your browsing experience not reliable. Of course, you can use a router with a battery but in my opinion, if the 3G/4G signals in your area are strong the internet bundled with a SIM card is a better option. I am using 80GB/month SIM card in Thailand and paying on the average just 4 dollars per month! I put the SIM card into a 10$ feature phone and use it as a hotspot device. Now my internet is reasonably fast. I haven't used MIFI before but from my experience, a 10$ phone hotspot does the job well.
+
+=== PC
+A desktop user should use UPS. However, a laptop battery is much lightweight than its UPS counterpart so I prefer the latter.
+
+=== Power Bank
+I am using a phone as a hotspot and a powerbank complements its extremely well. My Anker PowerCore 15600 power bank can serve my hotspot phone for like 2 days of the internet without external electricity.
+
+=== Razor
+Having a non-electric razor as a primary or a backup shaving tool can give you a consistent look even on a rainy day.
