@@ -1,0 +1,19 @@
+@import 'bem-mixins';
+@import 'grid-item-mixins';
+@import 'grid';
+@import 'book';
+@import 'blog';
+@import 'project';
+
+:root {
+	--theme-color-dark: #fff;
+	--theme-color-light: #fff;
+	--theme-color-superlight: #fff;
+}
+body {
+	background: lightgrey;
+	font-family: 'Roboto', sans-serif;
+	height: calc(100vh - 2px * 2);
+	margin: 2px;
+	visibility: hidden;
+}

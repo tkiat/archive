@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+    <meta charset='UTF-8'>
+    <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+    <meta http-equiv='X-UA-Compatible' content='ie=edge'>
+    <title>Trivial Project</title>
+    <link href='https://fonts.googleapis.com/css?family=Lato|Montserrat:800|PT+Sans&display=swap' rel='stylesheet'> 
+    <link rel='stylesheet' href='/build/css/normalize.min.css'>
+		<link rel="stylesheet" href="/static/fontawesome-free-5.12.0-web/css/all.css">
+    <script src='/build/js/dropdown-text.min.js'></script>
+    <script src='/build/js/menu-main.min.js'></script>
+		<style>
+			.trivial-table {
+				width: 100%;
+			}
+			td {
+				text-align: center;
+			}
+			th {
+				width: 50%;
+			}
+		</style>
+</head>
+<body>
+	<h1>Everything <span>Small</span></h1>
+	<h1>Will someday become <span>Big</span></h1>
+	<h2>Select Mode: <span id='dropdown-container'></span></h2>
+	
+	<table class='trivial-table'>
+		<tr>
+			<th>Estimated Effort (hrs)</th>
+			<th>Title</th>
+		</tr>
+		<tr>
+			<td>noob1</td>
+			<td>noob2</td>
+		</tr>
+	</table>
+
+	<menu-main current-page='trivial'></menu-main>
+	<script>
+		let dropdown_container = document.getElementById('dropdown-container');
+		dropdown_container.appendChild(createDropdown(["Front End", "Script", "Something Else"]));
+		function createDropdown(/*projects,*/types) {
+			let options = '';
+			types.forEach((type, index) => {
+				options += type;
+				if(index < types.length - 1) options += ',';
+			});
+			let dropdown = document.createElement('dropdown-text');
+			dropdown.setAttribute('data-list', options);
+			dropdown.addEventListener('click', function() {
+				//let opacity = project_panel.style.opacity;
+				//project_panel.style.opacity = opacity === '0.1' ? 'initial' : '0.1';
+			});
+			//detect attribute changes
+			const config = { attributes: true };
+			const callback = function(mutationsList, observer) {
+				//let project_type = mutationsList[0].target.attributes.value.value;
+				for(let mutation of mutationsList)
+					if (mutation.type === 'attributes') ;//createProjectTable(projects, project_type);
+			};
+			const observer = new MutationObserver(callback);
+			observer.observe(dropdown, config);
+			return dropdown;
+		}
+	</script>
+</body>
+</html>

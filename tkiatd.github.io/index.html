@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>tkiatd.github.io</title>
+	<!--manifest-->
+	<!--<link rel="manifest" href="manifest.json">-->
+	<!--temporary environment variable-->
+	<script>
+		var hostname = 'http://localhost:3000'
+		//var buildDir = ''
+		//var hostname = 'https://tkiatd.me'
+	</script>
+	<!--stylesheet-->
+	<link rel="stylesheet" type="text/css" href="build/style/index.min.css">
+	<!--web component-->
+	<script src='src/component/blog-book.js'></script>
+	<script src='src/component/blog-post.js'></script>
+<!--	<script src='build/script/blog-book.min.js'></script>-->
+<!--	<script src='build/script/blog-post.min.js'></script>-->
+	<!--external-->
+	<link href="https://fonts.googleapis.com/css2?family=Roboto&family=Pathway+Gothic+One&display=swap" rel="stylesheet">
+</head>
+<body>
+	<div id='grid' class='grid'>
+		<div id='about'>
+			<a href='#about' aria-label='about button' class='grid__label'>About</a>
+			<div class='grid__content grid__content--about'>
+				<div class='about'>
+					<span>Hi! I am </span>
+					<span class='about__header'>Theerawat Kiatdarakun</span>
+					<span> from Thailand. I have some </span>
+					<span class="about__subheader">Experience Abroad</span>
+					<span>including M.Sc. of Communications Engineering from Germany, 6-month engineering internship in Dresden Germany, and a year working in a non-engineering job in Berlin. While his</span>
+					<span class="about__subheader">Experience in Thailand</span>
+					<span>including B.Eng in Engineering from SIIT and worked as a teaching assistant for a while but that was very long ago like in 2011 or so. Let's talk about what I am doing recently. Nothing has actually pigued my interest since I came back from Germany, things don't actually make sense to me. People already have good stuffs, good infrastructure. As a result, I just play video games and have no desire to work though I was intereted in programming so first I finished two algorithm specializations from Coursera but found no immediate practical benefits. I finished most of freeCodeCamp curriculums (5 out of 6) but still found nothing to do. I shift my interest to Linux when I actually learn how to use it day by day. It teaches me the power of freedom since I have the power to change anything. It gives me comfort everytime I use my old 2008 Vaio laptop equipped with Void Linux.</span>
+					<span class='about__subheader'>My Mission Statement</span>
+					<span>is therefore to provide freedom to others. I am living a less-waste lifestyle and currently digging into open-source ecosystem. I feel a good sense of harmony now. This website is a repertoire of my blogs and projects to remind myself what I have done.</span>
+					<span class='about__subheader'>My Current Goal</span>
+					<span>is to find jobs, any job that I can sustain myself financially. I do </span>
+					<span class='about__subheader'>Coding as a Hobby</span>
+					<span> and also want to do it prefessionally. I am familiar (but not yet expert) with </span>
+					<span class='about__subheader'>Languages</span>
+					<span> such as HTML/CSS/SCSS/JS, Go, Python, Bash/Zsh, VimScript. </span>
+					<span class='about__subheader'>DevOps</span>
+					<span> Ansible, Git, Gulp.js, Terraform. </span>
+					<span class='about__subheader'>Services</span>
+					<span> AWS. I have a good command of </span>
+					<span class='about__subheader'>English</span>
+					<span>, I can converse at ease with foreigners.</span>
+					<span>If you wish, click </span>
+					<span class='about__subheader'>Contact Me</span>
+					<span> button at the top. I host my projects on <a href="#">GitHub</a>, forked and template codes on <a href="#">GitHub</a>, and here is my <a href="#">Resume</a>.</span>
+				</div>
+			</div>
+		</div>
+		<div id='project'>
+			<a href='#project' aria-label='project button' class="grid__label">Project</a>
+			<div class="grid__content grid__content--project">
+				<div class='project'>
+					<ol>
+						<li>
+							<span class='project__header'>This website</span><span> is my personal website where I host my projects/blogs/personal details. I use HTML/SCSS/JS and deploy on GitHub Pages for</span>
+							<span class='project__subheader'>Front-End</span><span>. For </span>
+							<span class='project__subheader'>Back-End</span><span>, at first, I employed a typical server written in GO/Node.js/Nginx hosted on DigitalOcean. Then, I migrate everything to Serverless architecture on AWS using Terraform/AWS Lambda/AWS CodeCommit/AWS DynamoDB/AWS Cognito. For more details, please read the <a href="#">GitHub</a> README.</span>
+						</li>
+						<li>
+							<span class="project__header">Game Client on Terminal</span>
+						</li>
+						<li>
+							<span class="project__header">Pomodoro Clock</span>
+						</li>
+						<li>
+							<span>I have done </span>
+							<span class="project__header">Course-Related Projects</span><span> which I put on <a href="#">GitHub</a>.</span>
+						</li>
+					</ol>
+				</div>
+			</div>
+		</div>
+		<div id='blog'>
+			<a id='blog-label' href='#blog' aria-label='blog button' class="grid__label">Blog</a>
+			<div class='grid__content grid__content--blog blog'>
+				<div id='blog-menu' class="blog__menu"></div>
+				<div id='blog-bookshelf' class='blog__bookshelf'></div>
+				<blog-post id="blog-article" class="blog__article" data-content=""></blog-post>
+			</div>
+		</div>
+		<div id='helper' class="grid__helper">
+			<a id='helper-item' href='#' aria-label='helper button' class="grid__label"></a>
+		</div>
+</body>
+<script src='src/script/blog.js'></script>
+<script defer src='src/script/index.js'></script>
+<!--<script defer src='build/script/index.min.js'></script>-->
+<!--<script src='build/script/blog.min.js'></script>-->

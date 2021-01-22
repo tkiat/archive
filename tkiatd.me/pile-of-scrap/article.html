@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Article</title>
+    <link rel="stylesheet" href="/build/css/normalize.min.css">
+    <link rel="stylesheet" href="/build/css/article.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Lato&display=swap" rel="stylesheet"> 
+	  <script src="/build/js/functions.min.js"></script>
+		<script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+    <link rel="stylesheet" href="/static/fontawesome-free-5.12.0-web/css/all.css">
+</head>
+<body>
+	<template id='header-generic'>
+		<a id='back-btn'><i class="fas fa-arrow-circle-left fa-2x"></i></a>
+		<a id='up-btn' href="#"><i class="fas fa-arrow-circle-up fa-2x"></i></a>
+		<h1 id='title'></h1>
+		<span class="header__date">Updated: <time id='header__date'></time></span>
+		<span id='header__category' class="header__category"></span>
+		<hr>
+	</template>
+	<main id="main">
+		<div id='post-container'></div>
+	</main>
+	<script>
+		const beautify = fileName => fileName.trim().replace(/[^-\w\s]/g,'').toLowerCase().split(' ').join('-');
+		//retrive url values
+	  const prevURL = document.referrer;
+		const url = window.location.pathname.split('/');
+		const page = url[1];
+		const category = decodeURIComponent(url[2]);
+		const topic = decodeURIComponent(url[3]);
+		const date = url[4];
+		const title_beautiful = decodeURIComponent(url[5]);
+
+		const date_obj = new Date(date);
+		const title_ugly = beautify(title_beautiful);
+		//constant
+		const month = ["January","February","March","April","May","June","July", "August","September","October","November","December"];
+		const post_container = document.getElementById('post-container');
+		//interpret URL
+		const template = document.getElementById('header-generic');
+		const clone = document.importNode(template.content, true);
+		clone.querySelector('#back-btn').setAttribute('href', prevURL);
+		clone.querySelector('#title').textContent = title_beautiful;
+		clone.querySelector('#header__date').setAttribute('datetime', date);
+		clone.querySelector('#header__date').textContent = date_obj.getDate() + ' ' + month[date_obj.getMonth()] + ' ' + date_obj.getFullYear();
+		clone.querySelector('#header__category').textContent = 'In ' + category + ' / ' + topic;
+		//insert to DOM 
+		const main = document.getElementById('main');
+		main.insertBefore(clone, post_container);
+		//read .md file
+		const fileName = '/' + page + '/' + category + '/' + topic + '/' + date + '--' + title_ugly + '.md'; 
+		readFile(fileName, function(res){
+			post_container.innerHTML = marked(res);
+		});
+	</script>
+</body>
+</html>

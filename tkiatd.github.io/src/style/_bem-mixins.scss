@@ -1,0 +1,12 @@
+@mixin element($name) {
+	@at-root #{&}__#{$name} {
+		@content;
+	}
+}
+@mixin modifier($names...) {
+	@each $name in $names {
+		@at-root #{&}--#{$name} {
+			@content;
+		}
+	}
+}

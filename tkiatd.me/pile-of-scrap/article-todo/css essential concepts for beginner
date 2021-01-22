@@ -1,0 +1,10 @@
+I have come across the quesdtions like how to set widhtr and height of a link but i think its better to understand basic concepts first than asking questions over and over again.
+
+note that there might be more solutions than written here
+
+inline and block element
+- inline element height and width are ignored to solve this assign display: inline-block.
+
+
+font
+- scaling based on container width https://stackoverflow.com/questions/16056591/font-scaling-based-on-width-of-container 

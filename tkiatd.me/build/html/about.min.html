@@ -1,0 +1,58 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1"><meta http-equiv="X-UA-Compatible" content="ie=edge"><title>Document</title><link rel="stylesheet" href="/static/fontawesome-free-5.12.0-web/css/all.css"><link rel="stylesheet" href="/build/css/about.min.css"><script src="/build/js/menu-main.min.js"></script></head><body class="body"><div class="flashlight"></div><a id="btn-back" class="btn-back" href="#" onclick="moveFlashlightTo(-20, -20)">Back</a><div id="paper" class="paper"><div class="paper-item paper-item--upper-left"><a class="paper-item__link paper-item__link--lower-right" href="#" onclick="moveFlashlightTo(0, 0)">Education &<br>Work History</a><div class="paper-item__content"><b><u>Formal Education:</u></b><br><br><strong><i>M. Sc. in Communications Engineering</i></strong> from RWTH Aachen, Germany (2016) and <strong><i>B. Eng. in Electronics and Communications</i></strong> from SIIT, Thammasat University (2012).<br><br><b><u>Certificates:</u></b><br><br><strong><i>freeCodeCamp:</i></strong> 5/6 Certificates Completed (xxxxxx) <strong><i><br>Coursera Verified Certificate: </i></strong>Algorithms Specialization (2018) <strong><i><br>Coursera Verified Certificate: </i></strong>Data Structures and Algorithms Specialization (2018)<br><br><b><u>Work History:</u></b><br><br><strong><i>Customer Service Agent</i></strong> at Arvato Bertelsmann, Berlin (for 1 year until xxxxxx). Despite the title I didn't interact with customers directly. Before this I <strong><i>interned</i></strong> at National Instruments Dresden about WiFi and stuff for 6 months (until xxxxxx). I used to be a <strong><i>teaching assistant</i></strong> (including programming labs) and a <strong><i>research assistant</i></strong> (about RFID technology) during my undergraduate studies.</div></div><div class="paper-item paper-item--upper-right"><a class="paper-item__link paper-item__link--lower-left" href="#" onclick="moveFlashlightTo(-40, 0)">Skills,<br>Purpose & Interests</a><div class="paper-item__content"><b><u>I have</u></b><br><br><ul class="paper-item__content-list"><li>ability to sit in front of computer for a long time.</li><li>basics knowledge of programming (visit project page for more details)</li><li>good Google skills</li></ul><br><br><b><u>Purpose</u></b><br><br>I lost interests in life after coming Back from Germany. Everything just doesn't make sense. After a while I discover that the way to overcome this is to know my own values. I value freedom, and I find software development fits this value perfectly. Sure, I need to be mostly disciplined but I believe that disciplines will reward freedom at the end. I take inspiration from people who help each other on online platforms. I too want to become one of them.<br><br><b><u>Interests</u></b><br><br>I am pretty much interested in sharpen my skills. So I am interested in programming for the most part. No, I don't mean AI or machine learning. I just want to create something myself like any apps/programs. My hobbies usually involve searching for new experience like indie video games, music and blogs. That's enough to fill my day already. I walk the dog 3 times per week.</div></div><div class="paper-item paper-item--lower-left"><div class="paper-item__link paper-item__link--upper-right"><!--
+        <a id='btn-extlink' class='btn-icon' href="/project"><i class="fas fa-briefcase fa-2x"></i></a>
+        <a id='btn-extlink' class='btn-icon' href="/blog"><i class="fas fa-blog fa-2x"></i></a>
+				--></div></div><div class="paper-item paper-item--lower-right"><a id="item-btn__upper-left" class="paper-item__link paper-item__link--upper-left" href="#" onclick="moveFlashlightTo(-40, -40)">Contact &<br>About This Site</a><div class="paper-item__content"><b><u>Contact</u></b><br><br>tkiatd@outlook.com<br><br><b><u>About This Site</u></b><br><br>I build this website from scratch using vanilla HTML, CSS & JS and Node.js, Marked.js without any other frameworks & libraries. I am not against frameworks & libraries but like the way people plant flowers of many types on the same soil, I like to host projects using frameworks on the same vanilla javascript website. On this website I use some assets from Font Awesome</div></div></div><menu-main current-page="about"></menu-main></body><script>var items_content = document.querySelectorAll('.paper-item__content');
+  var items_link = document.querySelectorAll('.paper-item__link');
+  var paper = document.getElementById('paper');
+  var btn_back = document.getElementById('btn-back');
+
+  var container_item_width = paper.clientWidth * 0.4;
+  var viewportWidth = Math.max(document.documentElement.clientWidth, window.innerWidth || 0);
+  var viewportHeight = Math.max(document.documentElement.clientHeight, window.innerHeight || 0);
+
+  function moveFlashlightTo(posX, posY){
+    if(posX === -20 && posY === -20){
+      items_content.forEach(item => {
+        item.classList.remove('paper-item__content--focused');
+      });
+      items_link.forEach(item => {
+        item.classList.add('paper-item__link--focused');
+      });
+      btn_back.classList.remove('btn-back--focused');
+    }
+    else {
+      items_content.forEach(item => {
+        item.classList.add('paper-item__content--focused');
+      });
+      items_link.forEach(item => {
+        item.classList.remove('paper-item__link--focused');
+      });
+      btn_back.classList.add('btn-back--focused');
+    }
+    // window.scrollTo({left: 0});
+    paper.style.setProperty('--posX', posX + '%');
+    paper.style.setProperty('--posY', posY + '%');
+  }
+  function toggleScrollbar() {
+    viewportWidth = Math.max(document.documentElement.clientWidth, window.innerWidth || 0);
+    viewportHeight = Math.max(document.documentElement.clientHeight, window.innerHeight || 0);
+    //if width > height then no x scrollbar
+    if(viewportWidth > viewportHeight){
+      document.body.classList.add('body_widescreen');
+    }
+    else{
+      document.body.classList.remove('body_widescreen');
+    }
+  }
+  window.addEventListener('scroll', function(e) {
+    if(window.scrollX >= container_item_width - viewportWidth) {
+      window.scrollTo(container_item_width - viewportWidth, 0);
+    }
+  });
+  window.addEventListener('resize', function(e) {
+    container_item_width = paper.clientWidth * 0.4;
+    toggleScrollbar();
+  });
+
+  moveFlashlightTo(-20, -20);
+  toggleScrollbar();</script></html>

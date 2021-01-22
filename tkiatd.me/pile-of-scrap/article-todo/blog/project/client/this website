@@ -1,0 +1,4 @@
+1. buy domain name >> i my self use namecheap
+2. find hosting service there are bla blaa bal but i choose cloud hosting digitalocean
+3. find the way to access remote host i use ssh wsl builtin support
+4. sync your domain with do change both places can wait 24 to 48 hours because isp dns cache interval

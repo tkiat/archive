@@ -1,0 +1,201 @@
+.book {
+	background-color: #eee;
+	box-shadow:
+		6px -6px 0 0px #eee, // 4th layer
+		6px -6px 1px 0px rgba(0,0,0,0.5), // 4th layer
+		8px -8px 0 0px #eee, // 5th layer
+		8px -8px 2px 0px rgba(0,0,0,0.5); // 5th layer
+	list-style: none;
+	position: absolute;
+	transition: all 1s;
+	width: 50%;
+	min-width: 200px;
+	max-width: 300px;
+	height: 80%;
+	&::after {
+		box-shadow:
+			0px 0px 1px 0px rgba(0,0,0,0.2), // 1st layer
+			2px -2px 0 0px #eee, // 2nd layer
+			2px -2px 1px 0px rgba(0,0,0,0.5), // 2nd layer
+			4px -4px 0 0px #eee, // 3rd layer
+			4px -4px 1px 0px rgba(0,0,0,0.5); // 3rd layer
+		content: '';
+		height: 100%;
+		left: 0;
+		pointer-events: none;
+		position: absolute;
+		top: 0;
+		width: 100%;
+	}
+	@include modifier(opened) {
+		background-color: #fff;
+		width: 100%;
+		max-width: 100%;
+		height: calc(100% - 4em);
+		.book-content {
+			display: block;
+		}
+		.book-cover {
+			display: none;
+		}
+	}
+	@include modifier(reading) {
+		height: 100%;
+	}
+	&-bookmark {
+		@include element(item){
+			background-color: #eee;
+			box-shadow: inset 0px -1px 3px 0px rgba(0,0,0,0.5);
+			color: rgba(95, 99, 104, 0);
+			cursor: pointer;
+
+			display: flex;
+			align-items: center;
+			justify-content: center;
+
+			font-size: 16px;
+			font-weight: bold;
+			line-height: 16px;
+			position: absolute;
+			text-decoration: none;
+			transform-origin: bottom;
+			white-space: pre;
+			@include modifier(appear) {
+				animation: textAnim 1s, scaleUp 1s;
+				animation-timing-function: ease-out;
+				animation-fill-mode: forwards;
+			}
+			@include modifier(disappear) {
+				animation: scaleDown 1s;
+				animation-fill-mode: forwards;
+			}
+			&:hover {
+				background-color: var(--theme-color-light);
+			}
+			&::selection {
+				color: none;
+				background: none;
+			}
+		}
+	}
+	&-content {
+		/*box-shadow: inset 0px 0px 1px black;*/
+		height: 100%;
+		left: 0;
+		overflow-y: auto;
+		position: absolute;
+		top: 0;
+		display: none;
+		white-space: pre;
+		width: 100%;
+		z-index: 0;
+	}
+	&-cover {
+		display: block;
+		width: 100%;
+		height: 100%;
+		@include element(upper) {
+			align-items: center;
+			background-color: #f1f1f1;
+			box-shadow: inset 0px 0px 3px black;
+			display: flex;
+			justify-content: center;
+			height: 45%;
+			width: 100%;
+			&-img {
+				display: block;
+				height: 100%;
+				width: 100%;
+			}
+		}
+		@include element(lower) {
+			box-shadow: inset 0px 0px 3px black;
+			font-family: 'Pathway Gothic One', sans-serif;
+			font-size: 20px;
+			height: 55%;
+			white-space: initial;
+			width: 100%;
+			&-title {
+				font-size: 1.5em;
+				line-height: 2em;
+				text-align: center;
+			}
+			&-list {
+				font-size: 1.2em;
+				line-height: 1.3em;
+				list-style-type: upper-roman;
+				text-align: left;
+			}
+		}
+	}
+	&-table {
+		border-collapse: collapse;
+		color: #433f40;
+		margin: 20px auto 0 auto;
+		overflow: hidden;
+		width: 95%;
+		font-size: 16px;
+		@include element(header) {
+			font-size: 16px;
+			position: sticky;
+			top: 0px;
+			&-item {
+				box-sizing: border-box;
+				cursor: pointer;
+				z-index: 2;
+				background-color: #fff;
+				padding: 1em 0.3em 1em 0.3em;
+				@include modifier(create, update) {
+					width: calc(7em / 1.3);
+				}
+				@include modifier(title) {
+					width: 100%;
+				}
+			}
+			&-link {
+				color: black;
+				text-decoration: underline;
+			}
+		}
+		@include element(row) {
+			border-bottom: 2px solid lightgrey;
+			&:hover {
+				cursor: pointer;
+				background-color: var(--theme-color-light) !important;
+			}
+			&:nth-child(even) {
+				background-color: var(--theme-color-superlight);
+			}
+			&-item {
+				box-sizing: border-box;
+				padding: 1em 1em 1em 0.5em;
+			}
+			&-link {
+				color: #433f40;
+				white-space: initial;
+				word-wrap: break-word;
+			}
+		}
+		@include element(title) {
+			font-size: 2em;
+			height: 3em;
+			width: 100%;
+			padding-left: 0.15em;
+			text-align: left;
+			white-space: initial;
+		}
+	}
+}
+@keyframes scaleDown {
+	from {transform: scaleY(1);}
+	to {transform: scaleY(0);}
+}
+@keyframes scaleUp {
+	from {transform: scaleY(0);}
+	to {transform: scaleY(1);}
+}
+@keyframes textAnim {
+	0% {color: rgba(99, 95, 104, 0);}
+	80% {color: rgba(99, 95, 104, 0);}
+	100% {color: rgba(99, 95, 104, 1);}
+}

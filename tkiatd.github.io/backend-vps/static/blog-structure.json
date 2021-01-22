@@ -1,0 +1,32 @@
+{
+  "Coding": {
+    "Backend": [
+      "f1.html",
+      "f2.html"
+    ],
+    "Backend-General": [
+      "a1-newer.html",
+      "a1.html"
+    ],
+    "Frontend": [
+      "b12.html",
+      "t1.html",
+      "t2.html",
+      "t3.html",
+      "t4.html",
+      "t5.html",
+      "t6.html",
+      "t7.html"
+    ]
+  },
+  "Tech": {
+    "General": [
+      "c1.html"
+    ]
+  },
+  "Zero_Waste": {
+    "List": [
+      "razor.html"
+    ]
+  }
+}

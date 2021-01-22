@@ -1,0 +1,123 @@
+// mode: primary, secondary-left, secondary-right, helper-about, helper-blog, helper-project
+@mixin grid-item($mode: '', $text-before: "", $text-hover-before: "", $text-hover-after: "") {
+	background: #fff;
+	border: 2px solid #000;
+	box-sizing: border-box;
+	color: #000;
+	font-size: 20px;
+	text-align: center;
+	.grid__content {
+		display: if($mode == primary, block, none);
+		height: 100%;
+		@include modifier(about) {
+			padding: 25px 25px 0 25px;
+			overflow-y: auto;
+			text-align: left;
+			/*line-height: 2em;*/
+			& ul {
+				list-style-type: none;
+			}
+			.about {
+				color: #222222;
+				/*text-align: justify;*/
+				& > *:last-child {
+					padding-bottom: 50px;
+				}
+				@include element(header) {
+					color: #000000;
+					font-size: 2em;
+				}
+				@include element(subheader) {
+					color: #111111;
+					font-size: 1.5em;
+					text-decoration: underline;
+				}
+			}
+		}
+		@include modifier(project) {
+			overflow-y: auto;
+			text-align: left;
+			.project {
+				background-color: white;
+				text-align: left;
+				@include element(header) {
+					font-size: 1.7em;
+				}
+				@include element(subheader) {
+					font-size: 1.3em;
+					text-decoration: underline;
+				}
+			}
+		}
+		@include modifier(blog) {
+			position: relative;
+			.blog {
+				@include element(article) {
+					display: none;
+					position: absolute;
+					top: 0; left: 0; right: 0; bottom: 0;
+					overflow-x: hidden;
+					overflow-y: auto;
+					z-index: 10;
+					background-color: #fff;
+				}
+				@include element(bookshelf) {
+					height: 100%;
+					overflow-x: hidden;
+					position: relative;
+				}
+				@include element(menu) {
+					position: absolute;
+					z-index: 1;
+					&-item {
+						background-color: lightgrey;
+						border: 1px solid grey;
+						border-left: 0;
+						border-top: 0;
+						color: black;
+						display: inline-block;
+						font-size: 16px;
+						padding: 1em 1.5em;
+						text-decoration: none;
+						@include modifier(topbook) {
+							background-color: var(--theme-color-light);
+							color: black;
+						}
+					}
+				}
+			}
+		}
+	}
+	.grid__label {
+		color: inherit;
+		text-decoration: none;
+		height: 100%;
+		width: 100%;
+		display: if(index(primary helper-blog, $mode), none, block);
+		&:focus, &:hover {
+			@if $mode == primary {
+				background-color: #fff;
+			} @else if $mode == helper-blog {
+				background-color: salmon;
+			} @else if $mode == helper-about or $mode == helper-project {
+				background-color: chartreuse;
+			} @else {
+				background-color: #ddd;
+			}
+			color: if(index(helper-about helper-blog helper-project, $mode), #614051, #000);
+			cursor: if($mode == primary, default, pointer);
+			&::after {
+				content: $text-hover-after;
+			}
+			&::before {
+				content: $text-before + $text-hover-before;
+			}
+		}
+		&::before {
+			content: $text-before;
+		}
+		@include modifier(appear) {
+			display: block;
+		}
+	}
+}

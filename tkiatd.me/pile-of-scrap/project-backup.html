@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Projects</title>
+    <link href="https://fonts.googleapis.com/css?family=Lato&display=swap" rel="stylesheet"> 
+    <link rel="stylesheet" href="/build/css/normalize.min.css">
+    <link rel="stylesheet" href="/build/css/project.min.css">
+    <script src="/build/component/dropdown-text.min.js"></script>
+    <script src="/build/component/menu-main.min.js"></script>
+	  <script src="/build/js/functions.min.js"></script>
+</head>
+<body>
+	<main>
+		<div id='filter-text' class='filter-text'>
+			Hi there! Now you are choosing <span class='container-filter' onclick="fade(this)" id='container-type'></span> project using <span class='container-filter' onclick="fade(this)" id='container-language'></span> language with <span class='container-filter' onclick="fade(this)" id='container-framework'></span> framework.
+			TODO put platform (codepen/local/ etc.)
+		</div>
+		<!--project table-->
+		<table id='tabletest' class='projects'>
+			<thead>
+				<tr>
+					<th class='projects__header-type' onclick="sortColumn('type')">Project Type</th>
+					<th class='projects__header-title' onclick="sortColumn('title')">Title</th>
+					<th class='projects__header-date' onclick="sortColumn('date')">Date</th>
+				</tr>
+			</thead>
+			<tbody id='tableData'></tbody>
+		</table>
+	</main>
+	<menu-main current-page='project'></menu-main>
+	<script src='/build/js/project.min.js'></script>
+</body>
+</html>

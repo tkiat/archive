@@ -1,0 +1,31 @@
+//constants
+$icon-color: lightgrey;
+$icon-current-color: black;
+$icon-hover-color: grey;
+//style
+.menu-main {
+	position: fixed;
+	bottom: 0;
+	right: 0;
+	padding: 10px;
+	z-index: 99;
+	&__item {
+		display: inline-block;	
+		&-link {
+			color: $icon-color;
+			display: inline-block;
+			padding: 0 10px;
+			&:hover {
+				color: $icon-hover-color;
+			}
+		}
+		&_current {
+			cursor: not-allowed;
+		}
+		&_current > &-link {
+			color: $icon-current-color;
+			pointer-events: none;
+		}
+	}
+}
+

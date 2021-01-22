@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Blog</title>
+    <link rel="stylesheet" href="/build/css/normalize.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Lato&display=swap" rel="stylesheet"> 
+    <script src="/build/component/nav-blog.min.js"></script>
+    <script src="/build/component/sidenav-blog.min.js"></script>
+    <script src="/build/component/menu-main.min.js"></script>
+    <script src="/build/component/table-post.min.js"></script>
+    <script src="/build/component/animation-human.min.js"></script>
+	  <script src="/build/js/functions.min.js"></script>
+		<style>
+			#main {
+				transition: margin-left 0.5s;
+			}
+			.shift-right {
+				margin-left: 200px;
+			}
+			body {
+				overflow: hidden;
+			}
+			img {
+				background-color: orange;
+				width: 150px;
+				height: 150px;
+				position: absolute;
+				bottom: 0;
+				left: 20%;
+				max-width:40%;
+				height:auto;
+				z-index: -1;
+			}
+		</style>
+</head>
+<body>
+	<header>
+		<div id='container'></div>
+		<div id='container-sidenav'></div>
+	</header>
+	<main id="main">
+		TODO all blogs on first page
+		<div id='post-container'>
+		</div>
+		<menu-main current-page='blog'></menu-main>
+	</main>
+	<script>
+		//retrieve url value
+		const path = window.location.pathname.split('/');
+		const isFrontpage = path[2] ? false : true;
+		const isTopicPage = path[3] ? true : false;
+		const category = decodeURIComponent(path[2]);
+		const topic = decodeURIComponent(path[3]);
+		//load blog structure to navbars
+		readFile('/static/json/blog-structure.json', function(res){
+			//nav: create and insert to container
+			let nav_blog = document.createElement('nav-blog');
+			nav_blog.setAttribute('blog-list', res);
+			document.getElementById('container').appendChild(nav_blog);
+			//sidenav: create and insert to container
+			let sidenav_blog = document.createElement('sidenav-blog');
+			sidenav_blog.setAttribute('blog-list', res);
+			sidenav_blog.setAttribute('category', category);
+			sidenav_blog.setAttribute('topic', topic);
+			if(isFrontpage) sidenav_blog.setAttribute('isFrontpage', '');
+			document.getElementById('container-sidenav').appendChild(sidenav_blog);
+			//shift content after toggling sidenav icon
+			const shadow = sidenav_blog.shadowRoot;
+			const childNodes = Array.from(shadow.childNodes);
+			var sidenav_icon;
+			childNodes.forEach(childNode => {
+				if (childNode.nodeName == 'LABEL') {
+					sidenav_icon = childNode;
+				}
+			});
+			var main = document.getElementById("main");
+			sidenav_icon.addEventListener('click', function (e) {
+				main.classList.toggle('shift-right');
+			});
+			//
+			if(isFrontpage) {
+				let post_container = document.getElementById('post-container');
+				//post_container.textContent = "This is blog first page. Simply navigate on navbar above TODO put all blog nav category and topics here";
+			}
+			else if (isTopicPage) {
+				let post_container = document.getElementById('post-container');
+				let post_table = document.createElement('table-post');
+				post_table.setAttribute('blog-list', res);
+				post_table.setAttribute('category', category);
+				post_table.setAttribute('topic', topic);
+				post_container.appendChild(post_table);
+			}
+		});
+		const anim = document.createElement('animation-human');
+		if(isFrontpage) document.body.appendChild(anim);
+	</script>
+</body>
+</html>

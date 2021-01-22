@@ -1,0 +1,1 @@
+https://www.quora.com/In-JavaScript-how-do-I-read-a-local-JSON-file

@@ -1,0 +1,95 @@
+//constants
+$bp-maxwidth-tablet: 768px;
+//style
+.project {
+	--text-type-fill: #f5f5f5;
+	--header-bg-color: #ddd;
+	//--link-hover-color: red;
+	box-sizing: border-box;
+	display: flex;
+	opacity: 0.85;
+	font-size: 1rem;
+	margin-bottom: 2em;
+	margin-left: -1px;
+	margin-top: -1px;
+	width: 100%;
+	&__description {
+		background-color: #fff;
+		border: 1px dashed grey;
+		position: relative;
+		width: 70%;
+		word-wrap: break-word;
+		font-family: 'PT Sans', 'Lato', sans-serif;
+	}
+	&__keywords {
+		border-bottom: 1px dotted grey;
+		font-size: 0.9em;
+		padding: 0 0.2em;
+	}
+	&__link {
+		bottom: -1.6em;
+		font-size: 1em;
+		height: 1.2em;
+		padding: 0.2em;
+		right: 0;
+		position: absolute;
+		&-elem {
+			padding: 0.2em;
+			&:empty {
+				display: none;
+			}
+			&:hover {
+				text-decoration: none;
+				//color: var(--link-hover-color);
+			}
+		}
+	}
+	&__short-dscp {
+		padding: 0.1em 0.2em;
+	}
+	&__time {
+		background-color: #eee;
+		border-bottom: 1px dotted grey;
+		box-sizing: border-box;
+		font-size: 0.9em;
+		padding: 0 0.2em;
+		width: 100%;
+		&-finished {
+			float: right;
+			font-weight: bold;
+		}
+		&-updated {
+			display: inline-block;
+		}
+	}
+	&__title {
+		background-color: var(--header-bg-color);
+		border-bottom: 1px dotted grey;
+		padding: 0.2em;
+		font-family: 'Lato', sans-serif;
+		font-size: 1.3em;
+	}
+	&__type {
+		position: relative;
+		width: 30%;
+		&-text {
+			font-family: 'Montserrat', cursive, sans-serif;
+			font-size: 2em;
+			left: 50%;
+			position: absolute;
+			text-align: center;
+			top: 50%;
+			transform: translate(-50%, -50%);
+			-webkit-text-fill-color: var(--text-type-fill);
+			-webkit-text-stroke-width: 1.5px;
+			-webkit-text-stroke-color: black;
+		}
+	}
+}
+
+@media only screen and (max-width: $bp-maxwidth-tablet) {
+	.project__type-text {
+		font-size: 1.4em;
+		-webkit-text-stroke-width: 1px;
+	}
+}

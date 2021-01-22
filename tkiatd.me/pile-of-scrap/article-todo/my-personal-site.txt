@@ -1,0 +1,49 @@
+frontend: nodejs without framework, html (pug), css (scss)
+	- nav bar: about, resume-short, resume-projects, blog
+database: mysql
+	- like date, author, post id
+ops-config: ansible
+git: github
+hosting: digital ocean
+domain: namecheap
+
+docker? no i dont see much benefit and not doing to use it it complicates things but i have a dozen of dockerized projects though
+
+
+programming blog up to 20 sub categories and <= label per each post
+software engineering
+	- design pattern
+languages
+	- english
+	- markup language
+	- js
+devops
+	- ansible
+framework
+	- 
+
+short gaming review
+	- point and click
+		definition
+		dscp (with tooltip dscp): length (based on howlongtobeat and my own judgment), year, metacritics
+		my review score: criteria - how it makes senses, story, character, gameplay (bug etc)
+	- methroidvania
+	    
+	- puzzle
+	    how makes sense it is, 
+other peom for supa	
+
+project
+- fcc(15)
+
+add noscript tag on index.html
+
+TODO
+nav bar as shadow dom
+is it SPA?
+blog as subdomain?
+
+
+finally do lighthouse test
+
+inspiration: dropdown text: https://codepen.io/afalchi82/pen/aNXjgb

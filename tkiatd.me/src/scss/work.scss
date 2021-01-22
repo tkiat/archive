@@ -1,0 +1,57 @@
+//constants
+$bp-maxwidth-tablet: 768px;
+//style
+:root {
+	font-size: 16px;
+}
+body {
+	font-family: 'Lato', sans-serif;
+	height: 100vh;
+	overflow: hidden;
+	width: 100vw;
+}
+dropdown-text {
+	color: blue;
+	cursor: pointer;
+	text-decoration: underline;
+}
+.dialog {
+	display:flex;
+	align-items: center;
+
+	font-size: 1.5rem;
+	height: 10%;
+	margin: 0 auto;
+	width: 90%;
+	&__greeting {
+		font-family: Arial, 'Lato', sans-serif;
+	}
+	&__inner {
+		text-align: center;
+		width: 100%;
+	}
+	&__quote {
+		font-family: 'PT Sans', sans-serif;
+		font-size: 0.7em;
+		font-weight: bold;
+		padding-bottom: 10px;
+		width: 100%;
+	}
+}
+.project-panel {
+	border: 1px solid dashed;
+	height: calc(90% - 52px); /* 52px is menu-main height */
+	left: 5%;
+	overflow-y: scroll;
+	position: absolute;
+	top: 10%;
+	width: 95%;
+}
+@media only screen and (max-width: $bp-maxwidth-tablet) {
+	:root {
+		font-size: 8px;
+	}
+	menu-main {
+		font-size: initial;
+	}
+}
