@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+	<meta charset='UTF-8'>
+	<meta name='viewport' content='width=device-width, initial-scale=1.0'>
+	<meta http-equiv='X-UA-Compatible' content='ie=edge'>
+	<title>RegExHelper</title>
+	<link rel='stylesheet' href='index.css'>
+</head>
+<body>
+	<p>REGULAR EXPRESSION</p>
+	<div class='input' id='input'>
+		<div class='input__prefix'>/</div>
+		<div class='regExInput-container'>
+			<input class='regExInput' id='regExInput' type='text' size='5' placeholder=' insert regular expression here'>
+		</div>
+		<div class='dropdown'>
+			<button class='dropdown__button'>/</button>
+			<ul class='dropdown__list'>
+				<li class='dropdown__item' data-flag='g'>g</li>
+				<li class='dropdown__item' data-flag='i'>i</li>
+				<li class='dropdown__item' data-flag='m'>m</li>
+				<li class='dropdown__item' data-flag='s'>s</li>
+				<li class='dropdown__item' data-flag='u'>u</li>
+				<li class='dropdown__item' data-flag='y'>y</li>
+			</ul>
+		</div>
+	</div>
+	<p>TEST STRING</p>
+	<div class='string'>
+		<textarea class='string__input' rows='15' cols='200'></textarea>
+		<div class='string__highlight'></div>
+	</div>
+	<script src='index.js'></script>
+	<!-- ⚐ -->
+</body>
+</html>

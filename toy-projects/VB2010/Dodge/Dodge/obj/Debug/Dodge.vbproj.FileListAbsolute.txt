@@ -1,0 +1,51 @@
+C:\Users\VAIO\AppData\Local\Temporary Projects\Dodge\bin\Debug\Dodge.exe
+C:\Users\VAIO\AppData\Local\Temporary Projects\Dodge\bin\Debug\Dodge.pdb
+C:\Users\VAIO\AppData\Local\Temporary Projects\Dodge\bin\Debug\Dodge.xml
+C:\Users\VAIO\AppData\Local\Temporary Projects\Dodge\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\VAIO\AppData\Local\Temporary Projects\Dodge\obj\Debug\Dodge.Form1.resources
+C:\Users\VAIO\AppData\Local\Temporary Projects\Dodge\obj\Debug\Dodge.Resources.resources
+C:\Users\VAIO\AppData\Local\Temporary Projects\Dodge\obj\Debug\Dodge.vbproj.GenerateResource.Cache
+C:\Users\VAIO\AppData\Local\Temporary Projects\Dodge\obj\Debug\Dodge.exe
+C:\Users\VAIO\AppData\Local\Temporary Projects\Dodge\obj\Debug\Dodge.xml
+C:\Users\VAIO\AppData\Local\Temporary Projects\Dodge\obj\Debug\Dodge.pdb
+C:\Users\VAIO\Desktop\Dodge\Dodge\obj\Debug\Dodge.exe
+C:\Users\VAIO\Desktop\Dodge\Dodge\obj\Debug\Dodge.xml
+C:\Users\VAIO\Desktop\Dodge\Dodge\obj\Debug\Dodge.pdb
+C:\Users\VAIO\Desktop\Dodge\Dodge\bin\Debug\Dodge.exe
+C:\Users\VAIO\Desktop\Dodge\Dodge\bin\Debug\Dodge.pdb
+C:\Users\VAIO\Desktop\Dodge\Dodge\bin\Debug\Dodge.xml
+C:\Users\VAIO\Desktop\Dodge\Dodge\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\VAIO\Desktop\Dodge\Dodge\obj\Debug\Dodge.Resources.resources
+C:\Users\VAIO\Desktop\Dodge\Dodge\obj\Debug\Dodge.vbproj.GenerateResource.Cache
+C:\Users\VAIO\Desktop\Dodge\Dodge\obj\Debug\Dodge.Dodge.resources
+C:\Users\VAIO\Desktop\Dodge\Dodge\bin\Debug\th\Dodge.resources.dll
+C:\Users\VAIO\Desktop\Dodge\Dodge\obj\Debug\Dodge.Dodge.th.resources
+C:\Users\VAIO\Desktop\Dodge\Dodge\obj\Debug\th\Dodge.resources.dll
+D:\About SIIT and me\VB2008\VB2008 Program\Dodge\Dodge\obj\Debug\Dodge.exe
+D:\About SIIT and me\VB2008\VB2008 Program\Dodge\Dodge\obj\Debug\Dodge.xml
+D:\About SIIT and me\VB2008\VB2008 Program\Dodge\Dodge\obj\Debug\Dodge.pdb
+D:\About SIIT and me\VB2008\VB2008 Program\Dodge\Dodge\bin\Debug\Dodge.exe
+D:\About SIIT and me\VB2008\VB2008 Program\Dodge\Dodge\bin\Debug\Dodge.pdb
+D:\About SIIT and me\VB2008\VB2008 Program\Dodge\Dodge\bin\Debug\Dodge.xml
+D:\About SIIT and me\VB2008\VB2008 Program\Dodge\Dodge\bin\Debug\th\Dodge.resources.dll
+D:\About SIIT and me\VB2008\VB2008 Program\Dodge\Dodge\obj\Debug\ResolveAssemblyReference.cache
+D:\About SIIT and me\VB2008\VB2008 Program\Dodge\Dodge\obj\Debug\Dodge.Dodge.resources
+D:\About SIIT and me\VB2008\VB2008 Program\Dodge\Dodge\obj\Debug\Dodge.Resources.resources
+D:\About SIIT and me\VB2008\VB2008 Program\Dodge\Dodge\obj\Debug\Dodge.Dodge.th.resources
+D:\About SIIT and me\VB2008\VB2008 Program\Dodge\Dodge\obj\Debug\GenerateResource.read.1.tlog
+D:\About SIIT and me\VB2008\VB2008 Program\Dodge\Dodge\obj\Debug\GenerateResource.write.1.tlog
+D:\About SIIT and me\VB2008\VB2008 Program\Dodge\Dodge\obj\Debug\th\Dodge.resources.dll
+D:\About SIIT and me\VB2010\Dodge\Dodge\obj\Debug\Dodge.exe
+D:\About SIIT and me\VB2010\Dodge\Dodge\obj\Debug\Dodge.xml
+D:\About SIIT and me\VB2010\Dodge\Dodge\obj\Debug\Dodge.pdb
+D:\About SIIT and me\VB2010\Dodge\Dodge\bin\Debug\Dodge.exe
+D:\About SIIT and me\VB2010\Dodge\Dodge\bin\Debug\Dodge.pdb
+D:\About SIIT and me\VB2010\Dodge\Dodge\bin\Debug\Dodge.xml
+D:\About SIIT and me\VB2010\Dodge\Dodge\bin\Debug\th\Dodge.resources.dll
+D:\About SIIT and me\VB2010\Dodge\Dodge\obj\Debug\ResolveAssemblyReference.cache
+D:\About SIIT and me\VB2010\Dodge\Dodge\obj\Debug\Dodge.Dodge.resources
+D:\About SIIT and me\VB2010\Dodge\Dodge\obj\Debug\Dodge.Resources.resources
+D:\About SIIT and me\VB2010\Dodge\Dodge\obj\Debug\Dodge.Dodge.th.resources
+D:\About SIIT and me\VB2010\Dodge\Dodge\obj\Debug\GenerateResource.read.1.tlog
+D:\About SIIT and me\VB2010\Dodge\Dodge\obj\Debug\GenerateResource.write.1.tlog
+D:\About SIIT and me\VB2010\Dodge\Dodge\obj\Debug\th\Dodge.resources.dll

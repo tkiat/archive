@@ -1,0 +1,14 @@
+.box {
+	background-color: gray;
+	margin: 40px auto;
+	width: 33vw;
+	height: 33vh;
+	text-align: center;
+}
+.css_output {
+	background-color: rgb(255, 230, 230);
+	width: 280px;
+}
+input[type=number]{
+	width: 40px;
+}

@@ -1,0 +1,3 @@
+D:\About SIIT and me\VB2010\WindowsApplication1\WindowsApplication1\obj\x86\Debug\WindowsApplication1.exe
+D:\About SIIT and me\VB2010\WindowsApplication1\WindowsApplication1\obj\x86\Debug\WindowsApplication1.xml
+D:\About SIIT and me\VB2010\WindowsApplication1\WindowsApplication1\obj\x86\Debug\WindowsApplication1.pdb

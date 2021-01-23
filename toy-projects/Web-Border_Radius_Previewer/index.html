@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+    <meta charset='UTF-8'>
+    <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+    <meta http-equiv='X-UA-Compatible' content='ie=edge'>
+    <title>Border-Radius Previewer</title>
+    <link rel='stylesheet' href='index.css'>
+</head>
+<body>
+    <form id='form'>
+        Enter border-radius:
+        <br/><br/>Top-left <input id='top-left' type='number' maxlength='4' size='4'> px
+        &emsp;Top-right <input id='top-right' type='number' maxlength='4' size='4'> px
+        &emsp;Bottom-right <input id='bottom-right' type='number' maxlength='4' size='4'> px
+        &emsp;Bottom-left <input id='bottom-left' type='number' maxlength='4' size='4'> px
+        <br/><br/>
+        Corresponding CSS: <input type='text' class='css_output' id='css_output' disabled>
+        <button onclick='css_copy()'>Copy CSS</button>
+    </form>
+    <div class='box' id='box'></div>
+    <script src='index.js'></script>
+</body>
+</html>
+<!--TODO prevent clear textbox-->

@@ -1,0 +1,33 @@
+C:\Users\VAIO\AppData\Local\Temporary Projects\WindowsApplication1\bin\Debug\WindowsApplication1.exe
+C:\Users\VAIO\AppData\Local\Temporary Projects\WindowsApplication1\bin\Debug\WindowsApplication1.pdb
+C:\Users\VAIO\AppData\Local\Temporary Projects\WindowsApplication1\bin\Debug\WindowsApplication1.xml
+C:\Users\VAIO\AppData\Local\Temporary Projects\WindowsApplication1\obj\x86\Debug\ResolveAssemblyReference.cache
+C:\Users\VAIO\AppData\Local\Temporary Projects\WindowsApplication1\obj\x86\Debug\WindowsApplication1.Form1.resources
+C:\Users\VAIO\AppData\Local\Temporary Projects\WindowsApplication1\obj\x86\Debug\WindowsApplication1.Resources.resources
+C:\Users\VAIO\AppData\Local\Temporary Projects\WindowsApplication1\obj\x86\Debug\GenerateResource.read.1.tlog
+C:\Users\VAIO\AppData\Local\Temporary Projects\WindowsApplication1\obj\x86\Debug\GenerateResource.write.1.tlog
+C:\Users\VAIO\AppData\Local\Temporary Projects\WindowsApplication1\obj\x86\Debug\WindowsApplication1.exe
+C:\Users\VAIO\AppData\Local\Temporary Projects\WindowsApplication1\obj\x86\Debug\WindowsApplication1.xml
+C:\Users\VAIO\AppData\Local\Temporary Projects\WindowsApplication1\obj\x86\Debug\WindowsApplication1.pdb
+C:\Users\VAIO\Desktop\WindowsApplication1\WindowsApplication1\obj\x86\Debug\WindowsApplication1.exe
+C:\Users\VAIO\Desktop\WindowsApplication1\WindowsApplication1\obj\x86\Debug\WindowsApplication1.xml
+C:\Users\VAIO\Desktop\WindowsApplication1\WindowsApplication1\obj\x86\Debug\WindowsApplication1.pdb
+C:\Users\VAIO\Desktop\WindowsApplication1\WindowsApplication1\bin\Debug\WindowsApplication1.exe
+C:\Users\VAIO\Desktop\WindowsApplication1\WindowsApplication1\bin\Debug\WindowsApplication1.pdb
+C:\Users\VAIO\Desktop\WindowsApplication1\WindowsApplication1\bin\Debug\WindowsApplication1.xml
+C:\Users\VAIO\Desktop\WindowsApplication1\WindowsApplication1\obj\x86\Debug\ResolveAssemblyReference.cache
+C:\Users\VAIO\Desktop\WindowsApplication1\WindowsApplication1\obj\x86\Debug\WindowsApplication1.Form1.resources
+C:\Users\VAIO\Desktop\WindowsApplication1\WindowsApplication1\obj\x86\Debug\WindowsApplication1.Resources.resources
+C:\Users\VAIO\Desktop\WindowsApplication1\WindowsApplication1\obj\x86\Debug\GenerateResource.read.1.tlog
+C:\Users\VAIO\Desktop\WindowsApplication1\WindowsApplication1\obj\x86\Debug\GenerateResource.write.1.tlog
+D:\About SIIT and me\VB2010\WindowsApplication1\WindowsApplication1\obj\x86\Debug\WindowsApplication1.exe
+D:\About SIIT and me\VB2010\WindowsApplication1\WindowsApplication1\obj\x86\Debug\WindowsApplication1.xml
+D:\About SIIT and me\VB2010\WindowsApplication1\WindowsApplication1\obj\x86\Debug\WindowsApplication1.pdb
+D:\About SIIT and me\VB2010\WindowsApplication1\WindowsApplication1\bin\Debug\WindowsApplication1.exe
+D:\About SIIT and me\VB2010\WindowsApplication1\WindowsApplication1\bin\Debug\WindowsApplication1.pdb
+D:\About SIIT and me\VB2010\WindowsApplication1\WindowsApplication1\bin\Debug\WindowsApplication1.xml
+D:\About SIIT and me\VB2010\WindowsApplication1\WindowsApplication1\obj\x86\Debug\ResolveAssemblyReference.cache
+D:\About SIIT and me\VB2010\WindowsApplication1\WindowsApplication1\obj\x86\Debug\WindowsApplication1.Form1.resources
+D:\About SIIT and me\VB2010\WindowsApplication1\WindowsApplication1\obj\x86\Debug\WindowsApplication1.Resources.resources
+D:\About SIIT and me\VB2010\WindowsApplication1\WindowsApplication1\obj\x86\Debug\GenerateResource.read.1.tlog
+D:\About SIIT and me\VB2010\WindowsApplication1\WindowsApplication1\obj\x86\Debug\GenerateResource.write.1.tlog

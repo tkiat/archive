@@ -1,0 +1,54 @@
+C:\Users\VAIO\AppData\Local\Temporary Projects\Mario\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\VAIO\AppData\Local\Temporary Projects\Mario\obj\Debug\Mario.Form1.resources
+C:\Users\VAIO\AppData\Local\Temporary Projects\Mario\obj\Debug\Mario.Resources.resources
+C:\Users\VAIO\AppData\Local\Temporary Projects\Mario\obj\Debug\Mario.vbproj.GenerateResource.Cache
+C:\Users\VAIO\AppData\Local\Temporary Projects\Mario\bin\Debug\Mario.exe
+C:\Users\VAIO\AppData\Local\Temporary Projects\Mario\bin\Debug\Mario.pdb
+C:\Users\VAIO\AppData\Local\Temporary Projects\Mario\bin\Debug\Mario.xml
+C:\Users\VAIO\AppData\Local\Temporary Projects\Mario\obj\Debug\Mario.exe
+C:\Users\VAIO\AppData\Local\Temporary Projects\Mario\obj\Debug\Mario.xml
+C:\Users\VAIO\AppData\Local\Temporary Projects\Mario\obj\Debug\Mario.pdb
+C:\Users\VAIO\Desktop\Mario\Mario\obj\Debug\Mario.exe
+C:\Users\VAIO\Desktop\Mario\Mario\obj\Debug\Mario.xml
+C:\Users\VAIO\Desktop\Mario\Mario\obj\Debug\Mario.pdb
+C:\Users\VAIO\Desktop\Mario\Mario\bin\Debug\Mario.exe
+C:\Users\VAIO\Desktop\Mario\Mario\bin\Debug\Mario.pdb
+C:\Users\VAIO\Desktop\Mario\Mario\bin\Debug\Mario.xml
+C:\Users\VAIO\Desktop\Mario\Mario\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\VAIO\Desktop\Mario\Mario\obj\Debug\Mario.Resources.resources
+C:\Users\VAIO\Desktop\Mario\Mario\obj\Debug\Mario.MarioJump.resources
+D:\About SIIT and me\VB2008\VB2008 Program\Mario\Mario\obj\Debug\Mario.exe
+D:\About SIIT and me\VB2008\VB2008 Program\Mario\Mario\obj\Debug\Mario.xml
+D:\About SIIT and me\VB2008\VB2008 Program\Mario\Mario\obj\Debug\Mario.pdb
+D:\About SIIT and me\VB2008\VB2008 Program\Mario\Mario\bin\Debug\Mario.exe
+D:\About SIIT and me\VB2008\VB2008 Program\Mario\Mario\bin\Debug\Mario.pdb
+D:\About SIIT and me\VB2008\VB2008 Program\Mario\Mario\bin\Debug\Mario.xml
+D:\About SIIT and me\VB2008\VB2008 Program\Mario\Mario\obj\Debug\ResolveAssemblyReference.cache
+D:\About SIIT and me\VB2008\VB2008 Program\Mario\Mario\obj\Debug\Mario.Resources.resources
+D:\About SIIT and me\VB2008\VB2008 Program\Mario\Mario\obj\Debug\Mario.MarioJump.resources
+D:\About SIIT and me\VB2008\VB2008 Program\Mario\Mario\obj\Debug\GenerateResource.read.1.tlog
+D:\About SIIT and me\VB2008\VB2008 Program\Mario\Mario\obj\Debug\GenerateResource.write.1.tlog
+D:\About SIIT and me\VB2010\Mario\Mario\obj\Debug\Mario.exe
+D:\About SIIT and me\VB2010\Mario\Mario\obj\Debug\Mario.xml
+D:\About SIIT and me\VB2010\Mario\Mario\obj\Debug\Mario.pdb
+D:\About SIIT and me\VB2010\Mario\Mario\bin\Debug\Mario.exe
+D:\About SIIT and me\VB2010\Mario\Mario\bin\Debug\Mario.pdb
+D:\About SIIT and me\VB2010\Mario\Mario\bin\Debug\Mario.xml
+D:\About SIIT and me\VB2010\Mario\Mario\obj\Debug\ResolveAssemblyReference.cache
+D:\About SIIT and me\VB2010\Mario\Mario\obj\Debug\Mario.Resources.resources
+D:\About SIIT and me\VB2010\Mario\Mario\obj\Debug\Mario.MarioJump.resources
+D:\About SIIT and me\VB2010\Mario\Mario\obj\Debug\GenerateResource.read.1.tlog
+D:\About SIIT and me\VB2010\Mario\Mario\obj\Debug\GenerateResource.write.1.tlog
+C:\Users\VAIO\Desktop\Mario\Mario\obj\Debug\GenerateResource.read.1.tlog
+C:\Users\VAIO\Desktop\Mario\Mario\obj\Debug\GenerateResource.write.1.tlog
+D:\About SIIT and me\VB2010\MarioJump\Mario\obj\Debug\Mario.exe
+D:\About SIIT and me\VB2010\MarioJump\Mario\obj\Debug\Mario.xml
+D:\About SIIT and me\VB2010\MarioJump\Mario\obj\Debug\Mario.pdb
+D:\About SIIT and me\VB2010\MarioJump\Mario\bin\Debug\Mario.exe
+D:\About SIIT and me\VB2010\MarioJump\Mario\bin\Debug\Mario.pdb
+D:\About SIIT and me\VB2010\MarioJump\Mario\bin\Debug\Mario.xml
+D:\About SIIT and me\VB2010\MarioJump\Mario\obj\Debug\ResolveAssemblyReference.cache
+D:\About SIIT and me\VB2010\MarioJump\Mario\obj\Debug\Mario.Resources.resources
+D:\About SIIT and me\VB2010\MarioJump\Mario\obj\Debug\Mario.MarioJump.resources
+D:\About SIIT and me\VB2010\MarioJump\Mario\obj\Debug\GenerateResource.read.1.tlog
+D:\About SIIT and me\VB2010\MarioJump\Mario\obj\Debug\GenerateResource.write.1.tlog
