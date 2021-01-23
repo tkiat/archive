@@ -1,0 +1,21 @@
+{
+	"name": "electron-webpack",
+	"version": "1.0.0",
+	"description": "Minimal electron with webpack",
+	"private": "true",
+	"main": "src/main.js",
+	"scripts": {
+		"test": "echo \"Error: no test specified\" && exit 1",
+		"build": "webpack",
+		"start": "electron ."
+	},
+	"keywords": [],
+	"author": "",
+	"license": "ISC",
+	"devDependencies": {
+		"electron": "^8.2.1",
+		"webpack": "^4.42.1",
+		"webpack-cli": "^3.3.11",
+		"webpack-merge": "^4.2.2"
+	}
+}

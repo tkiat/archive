@@ -1,0 +1,39 @@
+int equalStacks(vector<int> h1, vector<int> h2, vector<int> h3) {
+    
+    stack<int> st1, st2, st3;
+    int height1 = 0, height2 = 0, height3 = 0;
+    int i1 = 0, i2 = 0, i3 = 0;   
+    
+    for(auto it = h1.rbegin(); it != h1.rend(); it++){
+        height1 += *it;
+        st1.push(height1);
+    }
+    for(auto it = h2.rbegin(); it != h2.rend(); it++){
+        height2 += *it;
+        st2.push(height2);
+    }
+    for(auto it = h3.rbegin(); it != h3.rend(); it++){
+        height3 += *it;
+        st3.push(height3);
+    }
+    
+    while(!(st1.top() == st2.top() && st2.top() == st3.top())){
+            
+        if(st1.top() > st2.top() && !st1.empty()){
+            st1.pop();
+            if(st1.empty())
+                return 0;
+        }
+        if(st2.top() > st3.top() && !st2.empty()){
+            st2.pop();
+            if(st2.empty())
+                return 0;
+        }
+        if(st3.top() > st1.top() && !st3.empty()){
+            st3.pop();
+            if(st3.empty())
+                return 0;
+        }
+    }
+    return st1.top();
+}
