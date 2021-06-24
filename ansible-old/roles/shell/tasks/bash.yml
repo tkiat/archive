@@ -1,0 +1,5 @@
+- name: bash -> install
+  become: true
+  package:
+    name: bash
+    state: latest
