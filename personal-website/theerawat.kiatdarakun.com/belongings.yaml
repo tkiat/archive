@@ -1,0 +1,27 @@
+"clothing and accessories":
+  - exercise:
+    - brand: ronhill
+      variation: everyday tee M (dark grey melange)
+      material: at least 83% recycled polyester
+    - brand: ronhill
+      variation: everyday tee M (blue black melange)
+      material: at least 83% recycled polyester
+    - brand: ronhill
+      variation: everyday tee M (white)
+      material: 100% recycled polyester
+  - general:
+    - brand: muji
+      variation: short, navy gray
+      material: 100% hemp
+    - brand: muji
+      variation: short, pale orange
+      material: 100% hemp
+  - winter:
+    - brand: lyle & scott
+      variation: check flannel shirt burgundy, style LW1506V, color code Z562
+      material: 100% cotton
+"sleeping":
+  - pillow case:
+    - brand: muji
+      variation: ecru 44x63 cm
+      material: 100% linen
